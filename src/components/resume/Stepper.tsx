@@ -10,6 +10,7 @@ import {
 
 import { Step, type StepItem, Stepper } from "@/components/ui/stepper";
 import StepperFooter from "./StepperFooter";
+import BasicUserDetailForm from "./BasicUserDetailForm";
 
 const steps = [
   { label: "User Details", icon: User },
@@ -23,6 +24,7 @@ export default function StepperExamples() {
   return (
     <div className="flex w-full flex-col gap-4">
       <Stepper
+        orientation="vertical"
         initialStep={0}
         steps={steps}
         onClickStep={(step, setStep) => {
@@ -32,7 +34,9 @@ export default function StepperExamples() {
         {steps.map((stepProps, index) => {
           return (
             <Step key={stepProps.label} {...stepProps}>
-              <div className="p-6 border rounded-md "></div>
+              <div className="p-6 border rounded-md ">
+                {index == 0 && <BasicUserDetailForm />}
+              </div>
             </Step>
           );
         })}
