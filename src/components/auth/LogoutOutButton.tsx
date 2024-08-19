@@ -14,7 +14,7 @@ export const LogoutOutButton = () => {
           router.replace("/login");
         });
       }}
-      className="text-center rounded-md py-2 flex justify-center align-middle items-center gap-1"
+      className="text-center rounded-md py-2 flex justify-center align-middle items-center gap-1 text-black"
       variant="ghost"
     >
       <LogOut className="w-5 h-5" />
