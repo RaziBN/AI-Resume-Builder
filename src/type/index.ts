@@ -17,11 +17,63 @@ export interface UserDocument {
   createdAt: Date;
   updatedAt: Date;
 }
+export interface ExperienceDocument {
+  _id: string;
+  company: string;
+  position: string;
+  startDate: Date;
+  endDate: Date;
+  location: string;
+  responsibilities: string[];
+  projects: string[];
+  description: string;
+  userId: string;
+  formNumber: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface EducationDocument {
+  _id: string;
+  institution: string;
+  degree: string;
+  startDate: Date;
+  endDate: Date;
+  description: string;
+  userId: string;
+  formNumber: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+export interface ProjectDocument {
+  _id: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  url: string;
+  screenshot: string;
+  startDate: Date;
+  endDate: Date;
+  userId: string;
+  formNumber: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface SkillsDocument {
+  _id: string;
+  skills: Skill[];
+  userId: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export interface NavItemType {
   title: string;
   href: string;
   icon: string;
 }
+
 export interface userFromType {
   _id: string;
   email: string;
@@ -58,6 +110,7 @@ export interface educationFormType {
   formNumber: number;
   description: string;
 }
+
 export interface projectFormType {
   _id: string;
   title: string;
@@ -69,6 +122,7 @@ export interface projectFormType {
   userId: string;
   formNumber: number;
 }
+
 export interface Skill {
   name: string;
   proficiency: string;
