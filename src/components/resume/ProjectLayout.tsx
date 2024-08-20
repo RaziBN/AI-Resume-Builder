@@ -56,7 +56,7 @@ const ProjectLayout = () => {
       startDate: new Date(),
       endDate: new Date(),
       technologies: ["Nextjs", "NestJs", "mongoDB"],
-      url: "https://github.com/yashpatel521/nextjs-blog",
+      url: "https://github.com/RaziBN/AI-Resume-Builder",
     };
     setForms([...forms, newForm]);
   };
